@@ -54,7 +54,7 @@ function submit(){
 }
 
 function error(message){
-    console.log(message);
+    alert(message);
 }
 
 function processGuess(guess)
