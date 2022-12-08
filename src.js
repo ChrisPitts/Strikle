@@ -1,7 +1,7 @@
 var boxes = [];
 var curGuess = 0;
 var victoryAudio = new Audio("solidarity_forever.mp3");
-const word = "UNION";
+const word = "SCABS";
 
 function check_if_word_exists(word) {
     const url = "https://api.wordnik.com/v4/word.json/" + word + "/definitions?limit=200&includeRelated=false&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5";
@@ -97,8 +97,12 @@ function processGuess(guess)
     {
         victoryAudio.pause();
         victoryAudio.play();
+        curGuess = 6;
+        document.getElementById("answer").innerHTML = "<p>Thats right! The word was SCABS. We hate them! Thank you for not being one!</p>";
+        //alert("Thats right! The word was SCABS. We hate them! Thank you for not being one!")
     }
-    
+    else if(curGuess > 5)
+    document.getElementById("answer").innerHTML = "<p>The word was SCABS. We hate them! Thank you for not being one!</p>";
 }
 
 document.addEventListener("keyup", function(event) {
