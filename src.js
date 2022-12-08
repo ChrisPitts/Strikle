@@ -4,7 +4,7 @@ var victoryAudio = new Audio("solidarity_forever.mp3");
 const word = "SCABS";
 
 function check_if_word_exists(word) {
-    const url = "https://api.wordnik.com/v4/word.json/" + word + "/definitions?limit=200&includeRelated=false&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5";
+    const url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + word;
 
     let exists = 1;
 
@@ -17,7 +17,7 @@ function check_if_word_exists(word) {
         },
         error: function(){
             console.log("error");
-            error("Invalid Word");
+            error(word + " is an invalid word");
         }
     })
 
