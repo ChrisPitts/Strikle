@@ -42,7 +42,7 @@ function loadPage(){
 
 function submit(){
     if(curGuess > 5) return;
-    let guess = document.getElementById("guess").value;
+    let guess = document.getElementById("guess").value.toUpperCase();
     document.getElementById("guess").value = "";
     //check the length
     if(guess.length != 5)
