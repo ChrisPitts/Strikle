@@ -1,0 +1,39 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#guesscontainer{
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: repeat(6, 60px);
+    grid-template-columns: repeat(5, 60px);
+}
+
+#guesscontainer h1{
+    color: white;
+}
+
+.letter{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green{background-color: green; border: none;}
+.yellow{background-color: rgb(168, 168, 17); border: none;}
+.gray{background-color: gray; border: none;}
+
+#inputcontainer {
+    padding: 5px;
+}
