@@ -1,7 +1,7 @@
 var boxes = [];
 var curGuess = 0;
-var victoryAudio = new Audio("solidarity_forever.mp3");
-const word = "SCABS";
+var victoryAudio = new Audio("which_side_are_you_on.mp3");
+const word = "LABOR";
 
 function check_if_word_exists(word) {
     const url = "https://api.dictionaryapi.dev/api/v2/entries/en/" + word;
@@ -98,11 +98,12 @@ function processGuess(guess)
         victoryAudio.pause();
         victoryAudio.play();
         curGuess = 6;
-        document.getElementById("answer").innerHTML = "<p>Thats right! The word was SCABS. We hate them! Thank you for not being one!</p>";
+        document.getElementById("answer").innerHTML = "<p>Thats right! The word was LABOR. Withholding labor is the strongest negotiating tool workers have! Thank you for supporting NYT workers withholding their labor!</p>";
         //alert("Thats right! The word was SCABS. We hate them! Thank you for not being one!")
     }
     else if(curGuess > 5)
-    document.getElementById("answer").innerHTML = "<p>The word was SCABS. We hate them! Thank you for not being one!</p>";
+    document.getElementById('answer').innerHTML =
+			'<p>The word was LABOR. Withholding labor is the strongest negotiating tool workers have! Thank you for supporting NYT workers withholding their labor!</p>';
 }
 
 document.addEventListener("keyup", function(event) {

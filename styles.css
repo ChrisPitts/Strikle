@@ -46,3 +46,48 @@ p{
 #inputcontainer {
     padding: 5px;
 }
+
+#answer{
+    margin: auto;
+    max-width: 40rem;
+    padding: 1rem;
+    font-weight:500;
+}
+
+#donation{
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+#donation>p{
+    /* font-weight: 300; */
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+#donation .button{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    background: linear-gradient(#FFFFFF, #CCCCCC);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 10rem;
+    margin: auto;
+}
+
+#donation .button p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#donation .button img {
+    max-width: 2rem;
+}
+
+#donation .button:hover{
+    background: linear-gradient(#CCCCCC, #FFFFFF);
+}
